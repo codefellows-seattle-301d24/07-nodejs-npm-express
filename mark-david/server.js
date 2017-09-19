@@ -19,6 +19,14 @@ APP.get('/new', function(request, response) {
   response.sendFile('new.html', {root: './public'});
 })
 
+APP.get('/', function(request, response) {
+  response.sendFile('index.html', {root: './public'});
+})
+
+APP.get('*', function(request, response) {
+  response.sendFile('404.html', {root: './public'});
+})
+
 APP.post('/articles', bodyParser, function(request, response) {
   // REVIEW: This route will receive a new article from the form page, new.html,
   // and log that form data to the console. We will wire this up soon to actually
