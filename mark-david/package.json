@@ -8,5 +8,9 @@
     "start": "node server.js"
   },
   "author": "mark-davidl",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4"
+  }
 }
