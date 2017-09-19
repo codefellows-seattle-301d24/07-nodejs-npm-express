@@ -11,7 +11,7 @@ const bodyParser = require('body-parser').urlencoded({extended: true});
 const APP = EXPRESS();
 const PORT = process.env.PORT || 3000;
 
-// TODO: Include all of the static resources as an argument to app.use()
+// DONE: Include all of the static resources as an argument to app.use()
 APP.use(EXPRESS.static('public'));
 // TODO: (STRETCH) Write a new route that will handle a request and send the new.html file back to the user
 
@@ -26,4 +26,5 @@ APP.post('/articles', bodyParser, function(request, response) {
 
 APP.listen(PORT, function() {
   // TODO: Log to the console a message that lets you know which port your server has started on
+  console.log(`Express server currently running on port ${PORT}`);
 });
