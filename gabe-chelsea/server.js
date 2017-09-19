@@ -10,13 +10,14 @@ const EXPRESS = require('express');
 const bodyParser = require('body-parser').urlencoded({extended: true});
 const PORT = process.env.PORT || 3000;
 const APP = EXPRESS();
-// const PARSE = bodyParser();
 
 // DONE: Include all of the static resources as an argument to app.use()
 APP.use(EXPRESS.static('public'));
-// APP.use(PARSE.static('public'));
-// TODO: (STRETCH) Write a new route that will handle a request and send the new.html file back to the user
+// DONE: (STRETCH) Write a new route that will handle a request and send the new.html file back to the user
 
+APP.get('/new', function(request, response) {
+  response.sendFile('new.html', {root: './public'});
+});
 
 APP.post('/articles', bodyParser, function(request, response) {
   // REVIEW: This route will receive a new article from the form page, new.html,
