@@ -19,7 +19,7 @@ APP.use(EXPRESS.static('public'));
 // TODO: (STRETCH) Write a new route that will handle a request and send the new.html file back to the user
 
 
-app.post('/articles', bodyParser, function(request, response) {
+APP.post('/articles', bodyParser, function(request, response) {
   // REVIEW: This route will receive a new article from the form page, new.html,
   // and log that form data to the console. We will wire this up soon to actually
   // write a record to our persistence layer!
@@ -27,6 +27,7 @@ app.post('/articles', bodyParser, function(request, response) {
   response.send('Record posted to server!!');
 })
 
-app.listen(PORT, function() {
+APP.listen(PORT, function() {
   // TODO: Log to the console a message that lets you know which port your server has started on
+  console.log(`The server is on ${PORT}`);
 });
