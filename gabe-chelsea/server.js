@@ -9,9 +9,12 @@
 const EXPRESS = require('express');
 const bodyParser = require('body-parser').urlencoded({extended: true});
 const PORT = process.env.PORT || 3000;
+const APP = EXPRESS();
+const PARSE = bodyParser();
 
-// TODO: Include all of the static resources as an argument to app.use()
-
+// DONE: Include all of the static resources as an argument to app.use()
+APP.use(EXPRESS.static('public'));
+APP.use(PARSE.static('public'));
 // TODO: (STRETCH) Write a new route that will handle a request and send the new.html file back to the user
 
 
@@ -24,5 +27,6 @@ app.post('/articles', bodyParser, function(request, response) {
 })
 
 app.listen(PORT, function() {
-  // TODO: Log to the console a message that lets you know which port your server has started on
+  // DONE: Log to the console a message that lets you know which port your server has started on
+  console.log(`Express server currently running on port ${PORT}`);
 });
