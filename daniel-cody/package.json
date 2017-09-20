@@ -8,15 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxawolff/07-nodejs-npm-express.git"
+    "url": "git+https://github.com/dpillay03/07-nodejs-npm-express.git"
   },
-  "author": "Max and Jacob",
+  "author": "daniel-cody",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maxawolff/07-nodejs-npm-express/issues"
+    "url": "https://github.com/dpillay03/07-nodejs-npm-express/issues"
   },
-  "homepage": "https://github.com/maxawolff/07-nodejs-npm-express#readme",
-
+  "homepage": "https://github.com/dpillay03/07-nodejs-npm-express#readme",
   "dependencies": {
     "body-parser": "^1.18.1",
     "express": "^4.15.4"

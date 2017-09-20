@@ -1,0 +1,16 @@
+{
+  "name": "mark-david",
+  "version": "1.0.0",
+  "description": "class-07-lab",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "mark-davidl",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4"
+  }
+}
