@@ -1,0 +1,23 @@
+{
+  "name": "07-nodejs-npm-express",
+  "version": "1.0.0",
+  "description": "07 Lab npm package",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chelseadole/07-nodejs-npm-express.git"
+  },
+  "author": "Chelsea Dole and Gabe Meringolo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chelseadole/07-nodejs-npm-express/issues"
+  },
+  "homepage": "https://github.com/chelseadole/07-nodejs-npm-express#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4"
+  }
+}
