@@ -14,8 +14,16 @@ const PORT = process.env.PORT || 3000;
 // TODO:DONE Include all of the static resources as an argument to app.use()
 app.use(EXPRESS.static('public'));
 
-// TODO: (STRETCH) Write a new route that will handle a request and send the new.html file back to the user
-
+// TODO:DONE (STRETCH) Write a new route that will handle a request and send the new.html file back to the user
+app.get('/', function(request, response){
+  response.sendFile('index.html', {root: './public'});
+})
+app.get('/', function(request, response){
+  response.sendFile('new.html', {root: './public'});
+})
+app.get('*', function(request, response){
+  response.sendFile('404.html', {root: './public'});
+})
 
 app.post('/articles', bodyParser, function(request, response) {
   // REVIEW: This route will receive a new article from the form page, new.html,
@@ -26,5 +34,6 @@ app.post('/articles', bodyParser, function(request, response) {
 })
 
 app.listen(PORT, function() {
-  // TODO: Log to the console a message that lets you know which port your server has started on
+  // TODO:DONE Log to the console a message that lets you know which port your server has started on
+  console.log('Greetings Human, you are on port:' + PORT + '.');
 });
