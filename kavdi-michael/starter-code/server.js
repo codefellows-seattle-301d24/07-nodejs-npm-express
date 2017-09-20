@@ -15,10 +15,10 @@ const PORT = process.env.PORT || 3000;
 app.use(EXPRESS.static('public'));
 
 // TODO:DONE (STRETCH) Write a new route that will handle a request and send the new.html file back to the user
-app.get('/', function(request, response){
+app.get('/index', function(request, response){
   response.sendFile('index.html', {root: './public'});
 })
-app.get('/', function(request, response){
+app.get('/new', function(request, response){
   response.sendFile('new.html', {root: './public'});
 })
 app.get('*', function(request, response){
