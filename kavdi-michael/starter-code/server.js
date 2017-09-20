@@ -8,11 +8,11 @@
 // Be sure to install that and save it as a dependency after you create your package.json.
 const EXPRESS = require('express');
 const bodyParser = require('body-parser').urlencoded({extended: true});
-const APP = EXPRESS();
+const app = EXPRESS();
 const PORT = process.env.PORT || 3000;
 
 // TODO:DONE Include all of the static resources as an argument to app.use()
-APP.use(EXPRESS.static('public'));
+app.use(EXPRESS.static('public'));
 
 // TODO: (STRETCH) Write a new route that will handle a request and send the new.html file back to the user
 
