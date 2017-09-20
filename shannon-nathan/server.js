@@ -17,6 +17,10 @@ APP.use(EXPRESS.static('public'));
 // DONE: Include all of the static resources as an argument to app.use()
 
 // TODO: (STRETCH) Write a new route that will handle a request and send the new.html file back to the user
+APP.get('/', function(request, response){
+  console.log(`it works!!!`);
+  // response.sendFile('public/new.html');
+})
 
 
 APP.post('/articles', bodyParser, function(request, response) {
@@ -28,6 +32,6 @@ APP.post('/articles', bodyParser, function(request, response) {
 })
 
 APP.listen(PORT, function() {
-  // TODO: Log to the console a message that lets you know which port your server has started on
+  // DONE: Log to the console a message that lets you know which port your server has started on
   console.log(`The server is on ${PORT}`);
 });
