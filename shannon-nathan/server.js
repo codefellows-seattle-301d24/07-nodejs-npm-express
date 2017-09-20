@@ -11,19 +11,19 @@
 const EXPRESS = require('express');
 const bodyParser = require('body-parser').urlencoded({extended: true});
 const PORT = process.env.PORT || 3000;
-const APP = EXPRESS();
+const app = EXPRESS();
 
-APP.use(EXPRESS.static('public'));
+app.use(EXPRESS.static('public'));
 // DONE: Include all of the static resources as an argument to app.use()
 
 // TODO: (STRETCH) Write a new route that will handle a request and send the new.html file back to the user
-APP.get('/', function(request, response){
+app.get('/', function(){
   console.log(`it works!!!`);
   // response.sendFile('public/new.html');
 })
 
 
-APP.post('/articles', bodyParser, function(request, response) {
+app.post('/articles', bodyParser, function(request, response) {
   // REVIEW: This route will receive a new article from the form page, new.html,
   // and log that form data to the console. We will wire this up soon to actually
   // write a record to our persistence layer!
@@ -31,7 +31,7 @@ APP.post('/articles', bodyParser, function(request, response) {
   response.send('Record posted to server!!');
 })
 
-APP.listen(PORT, function() {
+app.listen(PORT, function() {
   // DONE: Log to the console a message that lets you know which port your server has started on
   console.log(`The server is on ${PORT}`);
 });
